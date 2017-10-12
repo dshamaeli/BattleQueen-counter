@@ -12,10 +12,8 @@ public class Monster
 
     private int strength; //Monster's strength should be betWON 0-10
     private int wrath; //Monster's wrath should be betWON 0-10
-    private int battleNo = 0;//count's Monster's battles
     private String name; //Monster's name
-    private String opponent1, opponent2, opponent3; //store Monster's opponents
-    private String result1,result2,result3; //store Monster's battles result
+    private int win,lost,draw = 0;
     private static int counter = 0; //to count monsters
 
     private static Scanner input = new Scanner(System.in);//input scanner
@@ -59,52 +57,26 @@ public class Monster
             default :
                 //in case something went wrong when I am coding
                 System.out.println(attribute+" is not a valid attribute!!");
-                return 0;
+                return 0; //need to return something 
         }
     }
     
-    //fight against opponent
-    public void fightVs(Monster opponent)
-    {
-        battleNo++; //holds the battle number
-
-        switch(battleNo) //records which opponent monster faced in each round
-        {
-        case 1 :
-            this.opponent1 = opponent.name; 
-            break;
-
-        case 2 :
-            this.opponent2 = opponent.name;
-            break;
-
-        case 3 :
-            this.opponent3 = opponent.name;
-            break; //just for cleaner code
-        }
-    }
-
     //records Monster's result
-    public void setResult(String result)
+    public void setResult(int result)
     {
-        /*
-        //this part is for mainteadec  
-        System.out.println("this is " + name +" battleNo:" + battleNo);
-        */
-        switch(battleNo)
+        switch(result)
         {
             case 1 :
-                this.result1 = result;
+                win++; // 1 is code for win in battleQueen class
                 break;
-            case 2 :
-                this.result2 = result;
+            case -1 :
+                lost++; // -1 is code for lost in battleQueen class
                 break;
-            case 3 :
-                this.result3 = result;
+            case 0 :
+                draw++; // 0 is code for draw in battleQueen class
                 break;
             default :
-                System.out.println("something is wrong");
-
+                System.out.println("something is wrong"); //just checking
         }
     }
 
@@ -113,8 +85,8 @@ public class Monster
     {
         System.out.println("\n##################\n");
         System.out.println("I am " + name + ", I:");
-        System.out.println(result1 + " My first battle VS " + opponent1);
-        System.out.println(result2 + " the Second battle VS " + opponent2);
-        System.out.println(result3 + " the third battle VS " + opponent3);
+        System.out.println("I won " + win + " times") ;
+        System.out.println("I lost " + lost + " times");
+        System.out.println("I draw " + draw + " times");
     }
 }
