@@ -12,7 +12,7 @@
     private static int battleNo = 0; //count battles
     Monster monster1, monster2, monster3, monster4;
 
-    //constructor
+        //constructor
     public BattleQueen(Monster monster1, Monster monster2, Monster monster3, Monster monster4)
     {
         this.monster1 = monster1;

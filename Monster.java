@@ -23,20 +23,42 @@ public class Monster
     {
         Monster monster = new Monster();
 
-        System.out.print("Please inter name for monster No." + ++counter +": ");
+        System.out.print("Please enter name for monster No." + ++counter +": ");
         monster.name = input.nextLine();
 
-        System.out.print("Please inter " + monster.name + " strength(0-10): ");
-        monster.strength = input.nextInt();
+        monster.strength = getValidInt("strength", monster.name);
 
-        System.out.print("Please inter " + monster.name + " wrath(0-10): ");
-        monster.wrath = input.nextInt();
-
-        input.nextLine();// skip unwanted return
+        monster.wrath = getValidInt("wrath",monster.name);
 
         //rerunting the created monster
         return monster;
     }
+
+    //gets a number in 0-10 range
+    public static int getValidInt(String tag,String name)
+	{
+		int var;
+		Scanner input = new Scanner(System.in);
+
+		do
+		{   
+			//prompting user for gold cube price
+			System.out.print("Please enter " + name +"'s "+ tag+"(0-10): ");
+				
+			//check if input is a number
+			while(!input.hasNextInt())  
+			{   
+				System.out.print("The "+ name +"'s " + tag +" should be a number(0-10): ");
+				input.next();
+			}
+
+			//geting use input
+			var = input.nextInt();
+		}
+		while(var <0 || var > 10); //checking unput until get a positive number
+
+		return var;
+	}
 
     //gives Monster's name
     public String showName()
