@@ -84,7 +84,7 @@ public class Monster
     public void showResults()
     {
         System.out.println("\n##################\n");
-        System.out.println("I am " + name + ", I:");
+        System.out.println("I am " + name + " :");
         System.out.println("I won " + win + " times") ;
         System.out.println("I lost " + lost + " times");
         System.out.println("I draw " + draw + " times");

@@ -6,9 +6,9 @@
  //BattleQueen arranges tournament
  public class BattleQueen
 {
-    private static final String TIE = "DRAW"; //shows Draw result
-    private static final String WON = "WON";  //shows win result
-    private static final String LOST= "LOST"; //shows lost result
+    private static final int TIE = 0; //shows Draw result
+    private static final int WON = 1;  //shows win result
+    private static final int LOST= -1; //shows lost result
     private static int battleNo = 0; //count battles
     Monster monster1, monster2, monster3, monster4;
 
@@ -38,9 +38,6 @@
                 monster1.showName() + "(" + opponent1_strength +"," +
                 opponent1_wrath +") VS " + monster2.showName() +"("+
                 opponent2_strength + "," + opponent2_wrath + ")");
-
-        monster1.fightVs(monster2); //ask Monster to fight opponent
-        monster2.fightVs(monster1); //ask Monster to fight opponent
 
         //judgement
         
