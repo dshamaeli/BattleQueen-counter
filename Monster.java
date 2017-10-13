@@ -1,6 +1,9 @@
 /** Author:Daniel Shamaeli, Student ID:201230464
     this is the second assigment for COMP517
+    for version which shows opponents go to
     https://github.com/dshamaeli/battleQueen
+    for this one go to:
+    https://github.com/dshamaeli/BattleQueen-counter.git
  */
 
 //import Scanner to get user input 
@@ -42,17 +45,17 @@ public class Monster
 
 		do
 		{   
-			//prompting user for gold cube price
+			//prompting user for input
 			System.out.print("Please enter " + name +"'s "+ tag+"(0-10): ");
 				
-			//check if input is a number
+			//check if input is an integer
 			while(!input.hasNextInt())  
 			{   
 				System.out.print("The "+ name +"'s " + tag +" should be a number(0-10): ");
 				input.next();
 			}
 
-			//geting use input
+			//getting user input
 			var = input.nextInt();
 		}
 		while(var <0 || var > 10); //checking unput until get a positive number

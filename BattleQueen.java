@@ -1,6 +1,9 @@
 /** Author:Daniel Shamaeli, Student ID:201230464
     this is the second assigment for COMP517
+    for version which shows opponents go to
     https://github.com/dshamaeli/battleQueen
+    for this one go to:
+    https://github.com/dshamaeli/BattleQueen-counter.git
  */
  
  //BattleQueen arranges tournament
