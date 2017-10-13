@@ -18,9 +18,9 @@
         //constructor
     public BattleQueen(Monster monster1, Monster monster2, Monster monster3, Monster monster4)
     {
-        this.monster1 = monster1;
-        this.monster2 = monster2;
-        this.monster3 = monster3;
+        this.monster1 = monster1;//this refers to current Monster Object
+        this.monster2 = monster2;//buy using this keyword we could use the same name for
+        this.monster3 = monster3;// method parameters
         this.monster4 = monster4;
     }
 
