@@ -46,19 +46,19 @@ public class Monster
 		do
 		{   
 			//prompting user for input
-			System.out.print("Please enter " + name +"'s "+ tag+"(0-10): ");
+			System.out.print("Please enter " + name +"'s "+ tag+"(1-10): ");
 				
 			//check if input is an integer
 			while(!input.hasNextInt())  
 			{   
-				System.out.print("The "+ name +"'s " + tag +" should be a number(0-10): ");
+				System.out.print("The "+ name +"'s " + tag +" should be a number(1-10): ");
 				input.next();
 			}
 
 			//getting user input
 			var = input.nextInt();
 		}
-		while(var <0 || var > 10); //checking unput until get a positive number
+		while(var < 1 || var > 10); //checking unput until get a positive number
 
 		return var;
 	}
